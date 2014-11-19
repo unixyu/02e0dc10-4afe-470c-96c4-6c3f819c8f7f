@@ -20,7 +20,8 @@ Tools you need
 ---
 1. beanstalkd server is setup for you already, make a JSON request to this:
 
-	/POST https://challenge.aftership.com/v1/beanstalkd
+	/POST http://challenge.aftership.net/v1/beanstalkd
+	header: aftership-api-key: a6403a2b-af21-47c5-aab5-a2420d20bbec
 
 2. Get a free mongodb server at [mongolab](https://mongolab.com/welcome/)
 
