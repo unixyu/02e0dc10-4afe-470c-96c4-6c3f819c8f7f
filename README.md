@@ -20,7 +20,7 @@ Tools you need
 ---
 1. beanstalkd server is setup for you already, make a JSON request to this:
 
-	/POST http://challenge.aftership.com/v1/beanstalkd
+	/POST https://challenge.aftership.com/v1/beanstalkd
 
 2. Get a free mongodb server at [mongolab](https://mongolab.com/welcome/)
 
