@@ -11,10 +11,28 @@ The challenge
 How it work?
 ---
 1. Seed your job in beanstalkd, tube_name = your_github_username
+sample beanstalk payload for getting HKD to USD currency.
+```
+{
+  "from": "HKD",
+  "to": "USD"
+}
+```
 
-2. Code a nodejs worker, get the job from beanstalkd, get the data from xe.com and save it to mongodb.
+2. Code a nodejs worker, get the job from beanstalkd, get the data from xe.com and save it to mongodb. Exchange rate need to be round off to `2` decmicals in STRING type.
 	a. If reqqust fail, reput to the tube and delay with 3s.
 	b. If request is done, reput to the tube and delay with 60s.
+
+mongodb data:
+```
+{
+	"from": "HKD",
+	"to": "USD",
+	"created_at": new Date(1347772624825),
+	"rate": "0.13"
+}
+
+```
 
 3. Stop the task if you tried 10 times.
 
