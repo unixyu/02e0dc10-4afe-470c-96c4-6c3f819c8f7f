@@ -1,4 +1,4 @@
-The challenge
+## The challenge
 ---
 
 * DOWNLOAD this repository to your own Github public repository.
@@ -8,10 +8,11 @@ The challenge
 * Get the xe.com exchange rate, store it in mongodb for every 1 min.
 
 
-How it work?
+## How it work?
 ---
 1. Seed your job in beanstalkd, tube_name = your_github_username
-sample beanstalk payload for getting HKD to USD currency.
+
+##### Sample beanstalk payload for getting HKD to USD currency.
 ```
 {
   "from": "HKD",
@@ -19,11 +20,13 @@ sample beanstalk payload for getting HKD to USD currency.
 }
 ```
 
-2. Code a nodejs worker, get the job from beanstalkd, get the data from xe.com and save it to mongodb. Exchange rate need to be round off to `2` decmicals in STRING type.
-	a. If reqqust fail, reput to the tube and delay with 3s.
+2. Code a nodejs worker, get the job from beanstalkd, get the data from xe.com and save it to mongodb. Exchange rate need to be round off to `2` decmicals in `STRING` type.
+	
+	a. If request fail, reput to the tube and delay with 3s.
+
 	b. If request is done, reput to the tube and delay with 60s.
 
-mongodb data:
+##### mongodb data:
 ```
 {
 	"from": "HKD",
@@ -36,7 +39,7 @@ mongodb data:
 
 3. Stop the task if you tried 10 times.
 
-Tools you need
+## Tools you need
 ---
 1. beanstalkd server is setup for you already, make a JSON request to this:
 
@@ -53,6 +56,6 @@ Tools you need
 5. Our [cook book](https://github.com/AfterShip/coding-guideline-javascript)
 
 
-Help?
+## Help?
 ---
 am9ic0BhZnRlcnNoaXAuY29t
