@@ -39,6 +39,9 @@
 
 3. Stop the task if you tried 10 times.
 
+4. NOTICE that the above bs payload is just an example, you should make sure your script can be run as distributed system (multiple instances), and also able to get MULTIPLE currenies if needed. Not only HKD to USD.
+
+
 ## Tools you need
 ---
 1. beanstalkd server is setup for you already, make a JSON request to this:
