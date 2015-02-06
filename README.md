@@ -37,9 +37,9 @@
 
 ```
 
-3. Stop the task if you tried 10 times.
+3. Stop the task if you tried 10 succeed attempt or 3 failed attempt.
 
-4. NOTICE that the above bs payload is just an example, you should make sure your script can be run as distributed system (multiple instances), and also able to get MULTIPLE currenies if needed. Not only HKD to USD.
+4. NOTICE that the above bs payload is just an example, you should make sure your script can be run as `distributed` system (multiple instances, multi process), and also able to get MULTIPLE currenies if needed. Not only HKD to USD.
 
 
 ## Tools you need
