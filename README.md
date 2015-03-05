@@ -8,11 +8,24 @@
 * Get the xe.com exchange rate, store it in mongodb for every 1 min.
 
 
+## Goal
+----
+Code a currency exchagne rate `worker`
+
+1. Input currency from USD, to HKD
+2. Get USD to HKD currency every 1 min, save 10 successful result to mongodb.
+3. If any problem during the get rate attempt, retry it delay with 3s
+4. If failed more than 3 times, give up the job.
+
+#### The worker should:
+Scale horizontally (can run in more than 1 process in many different machines)
+
 ## How it work?
 ---
+
 1. Seed your job in beanstalkd, tube_name = your_github_username
 
-##### Sample beanstalk payload for getting HKD to USD currency.
+##### Sample beanstalk payload for getting HKD to USD currency, you can use any format or content to fit your need.
 ```
 {
   "from": "HKD",
