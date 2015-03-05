@@ -41,6 +41,9 @@
 
 4. NOTICE that the above bs payload is just an example, you should make sure your script can be run as `distributed` system (multiple instances, multi process), and also able to get MULTIPLE currenies if needed. Not only HKD to USD.
 
+5. You are coding the `consumer` worker, NEVER use your worker to seed the data. 
+
+
 
 ## Tools you need
 ---
@@ -52,9 +55,9 @@
 
 2. Get a free mongodb server at [mongolab](https://mongolab.com/welcome/)
 
-3. You should need [fivebeans](https://github.com/ceejbot/fivebeans) npm
+3. You should need [fivebeans](https://github.com/ceejbot/fivebeans) npm or any tools u like.
 
-4. You may also need [Beanstalk console](https://github.com/ptrofimov/beanstalk_console)
+4. You may also need [Beanstalk console](https://github.com/ptrofimov/beanstalk_console) or any tools u like.
 
 5. Our [cook book](https://github.com/AfterShip/coding-guideline-javascript)
 
